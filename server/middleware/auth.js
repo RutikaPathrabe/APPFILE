@@ -8,7 +8,7 @@ export const veriftyToken = async (req, res, next)=>{
             return  res.status(403).send("Access Denied");
         }
 
-        if (token.startWith("Bearer")){
+        if (token.startWith("Bearer ")){
             token = token.slice(7, token.length).trimLeft();
         }
 
